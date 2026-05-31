@@ -156,16 +156,6 @@ Time: 0.10 s
 
 ---
 
-## Roadmap
-
-- [ ] VRPTW — enforce time window constraints (Solomon C/R/RC instances)
-- [ ] Exact MILP formulation via PuLP (two-index vehicle flow model)
-- [ ] Real road network routing via OSMnx + NetworkX
-- [ ] Interactive Folium map output
-- [ ] Clarke-Wright savings algorithm
-
----
-
 ## References
 
 - Solomon, M.M. (1987). *Algorithms for the Vehicle Routing and Scheduling Problems with Time Window Constraints.* Operations Research 35(2).
