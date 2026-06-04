@@ -2,7 +2,7 @@
 
 Solving the **Capacitated Vehicle Routing Problem (CVRP)** on real benchmark data using Google OR-Tools.
 
-> Tested on Python 3.10+.
+> Tested on Python 3.10+. Compatible with Python 3.11 and 3.12 as well.
 
 Given one depot, N customers, and K vehicles — assign every customer to a vehicle and sequence each vehicle's stops to minimise total travel distance, subject to capacity constraints.
 
