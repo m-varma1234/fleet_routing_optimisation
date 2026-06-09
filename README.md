@@ -25,7 +25,7 @@ Fleet routing is NP-hard. The search space grows factorially with the number of 
 
 ## Solver
 
-**Google OR-Tools routing solver** (`src/solvers/ortools_cvrp.py`)
+**Google OR-Tools routing solver** ([src/solvers/ortools_cvrp.py](src/solvers/ortools_cvrp.py))
 
 - Uses **Constraint Programming (CP)** for feasibility + **Guided Local Search (GLS)** metaheuristic for optimisation
 - Starts from a `PATH_CHEAPEST_ARC` seed, then iteratively improves by exploring neighbour solutions
@@ -38,7 +38,7 @@ The solver decides both **assignment** (which customers go to which vehicle) and
 
 ## Datasets
 
-Both datasets auto-download on first use and are cached in `data/raw/`.
+Solomon instances are auto-downloaded on first use and cached in `data/raw/solomon/`. Augerat instances must be downloaded separately (see Quick Start).
 
 ### Solomon VRPTW benchmarks
 
@@ -70,7 +70,7 @@ Pure capacity-constrained VRP without time windows.
 ├── data/
 │   └── raw/
 │       ├── solomon/          # .txt files (auto-downloaded)
-│       └── augerat/          # .vrp files (auto-downloaded)
+│       └── augerat/          # .vrp files (place manually or via download)
 ├── src/
 │   ├── utils/
 │   │   ├── data_loader.py    # parse Solomon & Augerat formats; build VRPInstance
@@ -79,8 +79,7 @@ Pure capacity-constrained VRP without time windows.
 │   │   └── ortools_cvrp.py   # OR-Tools routing solver + Route/VRPSolution dataclasses
 │   └── visualization/
 │       ├── plot_routes.py    # static matplotlib route plots
-│       └── animate_routes.py # animated GIF/video generator
-├── outputs/                  # generated media (gitignored)
+│       └── animate_routes.py # animated GIF generator
 ├── main.py                   # CLI entry point
 └── requirements.txt
 ```
@@ -148,11 +147,8 @@ Time: 0.10 s
 | Package | Purpose |
 |---|---|
 | `ortools` | Google OR-Tools — routing solver (CP + GLS) |
-| `networkx` | Graph algorithms for future graph-theoretic extensions |
-| `osmnx` | Real road networks from OpenStreetMap (planned) |
-| `pulp` | MILP modelling — planned exact two-index VRP formulation |
-| `geopandas` | Geospatial data handling |
-| `folium` | Interactive map visualisation (planned) |
+| `numpy` | Numerical operations and distance matrix computation |
+| `pandas` | Data manipulation and results tabulation |
 | `matplotlib` | Static route plots |
 | `Pillow` | GIF export for animated visualisations |
 
